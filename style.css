@@ -10,6 +10,10 @@ body,html{
 }*/
 
 
+iframe{
+	border-radius: 20px;
+}
+
 a{
 	color:#deb43a;
 	font-weight: bold;
@@ -80,6 +84,7 @@ p{
 img{
 	cursor: none;
 	border-radius: 20px;
+	object-fit: cover;
 }
 
 
