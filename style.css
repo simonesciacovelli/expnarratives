@@ -9,6 +9,59 @@ body,html{
 	background-color: #bebba6;
 }*/
 
+audio{
+	margin-top: 20px;
+}
+
+
+.pop{
+	width: 150px;
+	height: auto;
+	background-color: green;
+	position: absolute;
+	top: 20px;
+	font-size: 10px;
+	left: 200px;
+	display: none;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 10px;
+	background-color: white;
+}
+
+.pop3{
+	width: 150px;
+	height: auto;
+	background-color: green;
+	position: absolute;
+	top: 20px;
+	font-size: 10px;
+	left: 250px;
+	display: none;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 10px;
+	background-color: white;
+}
+
+.pop img{
+	margin-top: 5px;
+	height: 230px;
+}
+
+span{
+	font-weight: bold;
+	transition: 0.4s;
+	cursor: pointer;
+	color: orange;
+}
+
+span:hover{
+border-radius: 5px;
+background-color: white;
+color: orange;
+
+}
 
 iframe{
 	border-radius: 20px;
@@ -26,8 +79,7 @@ a:hover{
 	background-color: white;
 	color: black;
 	transition: 0.5s;
-	padding: 1px;
-	border-radius: 2px;
+	border-radius: 5px;
 
 }
 
@@ -36,7 +88,8 @@ p{
 	font-weight: 500;
 	font-family: roboto;
 	color: black;
-	text-align: center;
+	text-align: left;
+	margin: 0px;
 }
 
 .item{
@@ -83,12 +136,15 @@ p{
 
 img{
 	cursor: none;
-	border-radius: 20px;
+	border-radius: 20px !important;
 	object-fit: cover;
 }
 
 
-
+.cvrct img{
+	height: 500px;
+	border-radius: 20px;
+}
 
 .how .how-works {
     display: none;

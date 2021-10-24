@@ -71,3 +71,18 @@ function magnify(imgID, zoom) {
 
 
 magnify("imgt", 3);
+
+
+$(document).ready(function(){
+  $(".pop1").click(function(){
+    $(".pop").toggle();
+  });
+});
+
+$(document).ready(function(){
+  $(".pop2").click(function(){
+    $(".pop3").toggle();
+  });
+});
+
+
