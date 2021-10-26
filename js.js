@@ -25,10 +25,10 @@ function magnify(imgID, zoom) {
   /*set background properties for the magnifier glass:*/
   glass.style.backgroundImage = "url('" + img.src + "')";
   glass.style.backgroundRepeat = "no-repeat";
-  glass.style.backgroundSize = (img.width * zoom) + "% " + (img.height * zoom) + "%";
+  glass.style.backgroundSize = (img.width * zoom) + "px" + (img.height * zoom) + "px";
   bw = 3;
-  w = glass.offsetWidth / 4;
-  h = glass.offsetHeight / 4;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
   /*execute a function when someone moves the magnifier glass over the image:*/
   glass.addEventListener("mousemove", moveMagnifier);
   img.addEventListener("mousemove", moveMagnifier);
@@ -70,7 +70,7 @@ function magnify(imgID, zoom) {
 }
 
 
-magnify("imgt", 3);
+magnify("imgt", 7);
 
 
 $(document).ready(function(){
@@ -84,5 +84,4 @@ $(document).ready(function(){
     $(".pop3").toggle();
   });
 });
-
 
