@@ -1,183 +1,426 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width" />
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
 
-	<meta charset="utf-8">
-	<title></title>
-
+	
 </head>
-
 <body>
 
-
-
-<!-- 	<a href="pg_1.html"> 
-	<div class="bttnhome"> <img src="arrow.svg"> </div>
-	</a> -->
-
-<div class="imgct">
-
-<div class="owl-carousel owl-theme">
-
-
-<div class="cvrct">
-
-  <img src="cvr.png">
-
+<div class="titlecont"><h2>The Mechanical Wanderer is a visual examination of a system perceiving a series of worlds that move following a cyclical and designated rhythm. 
+Each world has its peculiarities, forms, and characteristics. 
+<br><br>
+The main character, in its interactive form presented in the first section of the project, is substituted by its point of view to carefully analyze these intricate worlds. </h2>
 </div>
 
+<!-- <div class="titlecont"><h2>The Mechanical Explorer</h2></div> -->
 
-<div class="item">
-<p>
+<div class="overcont">
 
-  <div class="pop">
-    <p>
-Ned Land is a master harpooner. He was most likely brought in due to Dr. Aronnax's theory that the creature was a great narhwal. The opposite of Dr. Aronnax, Land is the first to follow his gut and takes reality as what he sees to be the truth, instead of believing what others inform him.</p>
-<img src="c1.jpg">
-  </div>
+<div id="container">
+	
+	<script type="module">
 
-It was the commander of the vessel who thus spoke.
-At these words, <span class="pop1" href="">Ned Land</span> rose suddenly. The steward, nearly strangled,
-tottered out on a sign from his master. But such was the power of the
-commander on board, that not a gesture betrayed the resentment which
-this man must have felt towards the Canadian. Conseil interested in
-spite of himself, I stupefied, awaited in silence the result of this
-scene. <br><br>
-The commander, leaning against the corner of a table with his arms
-folded, scanned us with profound attention. Did he hesitate to speak?
-Did he regret the words which he had just spoken in French? One might
-almost think so.<br><br>
-After some moments of silence, which not one of us dreamed of breaking,
-"Gentlemen," said he, in a calm and penetrating voice, "I speak French,
-English, German, and Latin equally well. I could, therefore, have
-answered you at our first interview, but I wished to know you first,
-then to reflect. The story told by each one, entirely agreeing in the
-main points, convinced me of your identity. I know now that chance has
-brought before me M. Pierre Aronnax, Professor of Natural History at
-the Museum of Paris, entrusted with a scientific mission abroad,
+import * as THREE from '../build/three.module.js';
 
-</p>
-</div>
+            import { OrbitControls } from './jsm/controls/OrbitControls.js';
+            import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
+            import { RGBELoader } from './jsm/loaders/RGBELoader.js';
+            import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
 
+            let camera, scene, renderer, controls, clock, mixer;
 
+            init();
+            animate();
 
-<div class="img-magnifier-container">
-  <img id="imgt" src="1.jpeg" width="600" height="400">
-</div>
+            function init() {
 
+                clock = new THREE.Clock();
 
-<div class="item">
-<p>
+                const container = document.getElementById( 'container' );
 
-<div class="pop3">
-  <img src="3.jpg">
-</div>
+                // const container = document.createElement( 'div' );
+                // document.body.appendChild( container );
+                
 
-Conseil, his servant, and Ned Land, of Canadian origin, harpooner on
-board the <span class="pop2">frigate</span> Abraham Lincoln of the navy of the United States of
-America." <br><br>
-I bowed assent. It was not a question that the commander put to me.
-Therefore there was no answer to be made. This man expressed himself
-with perfect ease, without any accent. His sentences were well turned,
-his words clear, and his fluency of speech remarkable. Yet, I did not
-recognise in him a fellow-countryman.<br><br>
-He continued the conversation in these terms:
-"You have doubtless thought, sir, that I have delayed long in paying
-you this second visit. The reason is that, your identity recognised, I
-wished to weigh maturely what part to act towards you. I have
-hesitated much. Most annoying circumstances have brought you into the
-presence of a man who has broken all the ties of humanity. You have
-come to trouble my existence."<br><br>
-"Unintentionally!" said I.<br><br>
+                // camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 0.25, 20 );
 
-<audio src="s1.mp3" controls="controls"></audio>
+                camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.25, 20 )
 
-</p>
-</div>
+                camera.position.set( -17, 4, -8.7 );
 
+                console.log(camera)
 
-<div class="item">
-<p>
+                scene = new THREE.Scene();
 
-struck me with his harpoon?" <br><br>
-I detected a restrained irritation in these words. But to these
-recriminations I had a very natural answer to make, and I made it.
-"Sir," said I, "no doubt you are ignorant of the discussions which have
-taken place concerning you in America and Europe. You do not know that
-divers accidents, caused by collisions with your submarine machine,
-have excited public feeling in the two continents. I omit the theories
-without number by which it was sought to explain that of which you
-alone possess the secret. But you must understand that, in pursuing
-you over the high seas of the Pacific, the Abraham Lincoln believed
-itself to be chasing some powerful sea-monster, of which it was
-necessary to rid the ocean at any price."<br><br>
-A half-smile curled the lips of the commander: then, in a calmer tone:
-"M. Aronnax," he replied, "dare you affirm that your frigate would not
-as soon have pursued and cannonaded a submarine boat as a monster?"
-This question embarrassed me, for certainly Captain Farragut might not
-have hesitated. He might have thought it his duty to destroy a
-contrivance of this kind, as he would a gigantic narwhal.
-"You understand then, sir," continued the stranger, "that I have the
-right to treat you as enemies?" 
+                new RGBELoader()
+                    .setPath( 'textures/' )
+                    .load( 'royal_esplanade_1k.hdr', function ( texture ) {
 
-</p>
-</div>
+                        texture.mapping = THREE.EquirectangularReflectionMapping;
 
+                        // scene.background = texture;
+                        scene.environment = texture;
 
-<div class="sketchfab-embed-wrapper"> 
-  <iframe title="Old Diving Helmet" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="500" height="500" src="https://sketchfab.com/models/eff849bb58864ce19987fe9b7b5e28cc/embed?camera=0&ui_hint=0&ui_theme=dark"></iframe>
-</div>
+                        render();
 
+                        // model
+                        // use of RoughnessMipmapper is optional
+                        const roughnessMipmapper = new RoughnessMipmapper( renderer );
 
-<div class="item">
-<p>
+                        const loader = new GLTFLoader().setPath( 'models/' );
+                        loader.load( 'p2.glb', function ( gltf ) {
 
-You are going to visit the land of marvels. <br><br>
-These words of the commander had a great effect upon me. I cannot deny
-it. My weak point was touched; and I forgot, for a moment, that the
-contemplation of these sublime subjects was not worth the loss of
-liberty. Besides, I trusted to the future to decide this grave
-question. So I contented myself with saying:
-"By what name ought I to address you?"<br><br>
-"Sir," replied the commander, "I am nothing to you but Captain Nemo;
-and you and your companions are nothing to me but the passengers of the
-Nautilus."<br><br>
-Captain Nemo called. A steward appeared. The captain gave him his
-orders in that strange language which I did not understand. Then,
-turning towards the Canadian and Conseil:
-"A repast awaits you in your cabin," said he. "Be so good as to follow
-this man.<br><br>
-"And now, M. Aronnax, our breakfast is ready. Permit me to lead the
-way."<br><br>
-"I am at your service, Captain." 
+                            gltf.scene.traverse( function ( child ) {
 
-</p>
-</div>
+                                if ( child.isMesh ) {
 
-    
+                                    roughnessMipmapper.generateMipmaps( child.material );
+
+                                }
+
+                            } );
+                            scene.add( gltf.scene );
+                            roughnessMipmapper.dispose();
+                            render();
+
+                        } );
+
+                    } );
+
+                renderer = new THREE.WebGLRenderer( { alpha: true, antialias: false, powerPreference: "high-performance" } );
+             //    var container = document.getElementById('canvas');
+         				// var w = container.offsetWidth;
+         				// var h = container.offsetHeight;
+         				// renderer.setSize(w, h);
+         				// container.appendChild(renderer.domElement);
+                renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize( window.innerWidth, window.innerHeight );
+                renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                renderer.toneMappingExposure = 1;
+                renderer.outputEncoding = THREE.sRGBEncoding;
+                container.appendChild( renderer.domElement );
+
+                const controls = new OrbitControls( camera, renderer.domElement );
+                // controls.enableDamping = true;
+                controls.minDistance = 10;
+                controls.maxDistance = 20;
+                controls.target.set( -0.1, -0.1, -0.1 );
+                controls.update();
+                window.addEventListener( 'resize', onWindowResize );
+
+        }
+
+            function onWindowResize() {
+
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize( window.innerWidth, window.innerHeight );
+                render();
+
+            }
 
 
+
+            function animate() {
+
+            // requestAnimationFrame( animate );
+            // controls.update();
+            render();
+
+            }
+
+
+            function render() {
+
+             scene.rotation.y += 0.001;
+             scene.rotation.x += 0.001;
+
+                requestAnimationFrame(render);
+
+                renderer.render( scene, camera );
+
+            }
+
+</script>
 
 
 </div>
 
+</div>
+
+
+<div class="titlecont"><h2>The worlds are displayed through a window that blends interactivity with storytelling, encouraging the exploration of these peculiar views
+<br><br>
+Scroll to hide the text and move the cursor to find clues or proceed to the next world</h2>
+</div>
+
+
+
+<div class="allcont">
+
+	<div class="vidcont">
+
+
+
+	<!-- ----------1----------- -->
+	<video id="1mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="1in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="1mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="1.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="1mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="1out.webm" type="video/mp4">
+	</video>
+
+	<div class="textcont">
+
+		<p id="t1"> <em>The Silent Valley</em> of golden waves captures fragments and agitation of words devoid of sounds</p>
+
+		<p class="hidden" id="t2"> <em>The Impervious Temple</em> that observes and directs malleable forms</p>
+
+		<p class="hidden" id="t3"><em>The Translucent Lab</em> holds and dissects specimens of dubious significance and provenance</p>
+
+		<p class="hidden" id="t4"><em>The Amorphous Alps</em> hide gems of blinding brilliance and lights of inescapable darkness</p>
+
+		<p class="hidden" id="t5"><em>The Bewildering Ocean</em> traps lost mariners in alluring arms and soporific stares</p>
+
+		<p class="hidden" id="t6"><em>The Gazing Metropolis</em> confuses its dwellers with invisible eyes and kaleidoscopic rhythms</p>
+
+		<p class="hidden" id="t7"><em>The Rotating Stations</em> transports visitors through ethereal tunnels and dubious destinations</p>
+
+		<p class="hidden" id="t8"><em>The Anxious Monument</em> glances nearby for meaning and illuminated pyramids</p>
+
+		<p class="hidden" id="t9"><em>The Segmented Observatory</em> traps distant screams of forgotten creatures through ages and places</p>
+
+		<p class="hidden" id="t10"><em>The Crystal Cube</em> conserves knowledge of no meaning, sustained by lights of monotonous resonance</p>
+
+		<p class="hidden" style="text-align: center;" id="t11">Overload</p>
+
+		<div class="bttm"></div>
+
+		<div class="interface"><i class="material-icons-outlined">info</i></div>
+
+	</div>
+
+	<!-- ----------1----------- -->
+
+
+
+	<!-- ----------2----------- -->
+	<video class="hidden" id="2mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="2in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="2mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="2.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="2mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="2out.webm" type="video/mp4">
+	</video>
+
+
+	<!-- ----------2----------- -->
+
+
+	<!-- ----------3----------- -->
+	<video class="hidden" id="3mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="3in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="3mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="3.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="3mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="3out.webm" type="video/mp4">
+	</video>
+	<!-- ----------3----------- -->
+
+
+	<!-- ----------4----------- -->
+	<video class="hidden" id="4mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="4in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="4mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="4.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="4mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="4out.webm" type="video/mp4">
+	</video>
+	<!-- ----------4----------- -->
+
+
+
+
+	<!-- ----------5----------- -->
+	<video class="hidden" id="5mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="5in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="5mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="5.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="5mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="5out.webm" type="video/mp4">
+	</video>
+	<!-- ----------5----------- -->
+
+
+	<!-- ----------6----------- -->
+	<video class="hidden" id="6mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="6in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="6mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="6.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="6mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="6out.webm" type="video/mp4">
+	</video>
+	<!-- ----------6----------- -->
+
+
+	<!-- ----------7----------- -->
+	<video class="hidden" id="7mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="7in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="7mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="7.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="7mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="7out.webm" type="video/mp4">
+	</video>
+	<!-- ----------7----------- -->
+
+
+	<!-- ----------8----------- -->
+
+	<video class="hidden" id="8mainvid_in" playsinline autoplay muted width="100%">
+		<source src="8in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="8mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="8.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="8mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="8out.webm" type="video/mp4">
+	</video>
+	<!-- ----------8----------- -->
+
+
+	<!-- ----------9----------- -->
+	<video class="hidden" id="9mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="9in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="9mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="9.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="9mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="9out.webm" type="video/mp4">
+	</video>
+	<!-- ----------9----------- -->
+
+
+	<!-- ----------10----------- -->
+	<video class="hidden" id="10mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="10in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="10mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="10.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="10mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="10out.webm" type="video/mp4">
+	</video>
+	<!-- ----------10----------- -->
+
+	<!-- ----------end----------- -->
+	<video class="hidden" id="11mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="end.webm" type="video/mp4">
+	</video>
+	<!-- ----------end----------- -->
+
+
+	<!-- -----------clues-bt---------- -->
+
+	<div id="intract"><i class="material-icons">chevron_right</i></div>
+	<div id="clue_a1"><h1> A mysterious flora of dazzling colors </h1></div>
+	<div id="clue_a2"><h1> Cubes of dubious forms </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract2"> <i class="material-icons">chevron_right</i> </div>
+	<div style="display: flex;" class="hidden" id="clue_a3"><h1> Malleable clouds of odd materials </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a4"><h1> A diligent and observing eye </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract3"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a5"><h1> Moving invisible hands  </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a6"><h1> A translucent container of peculiar interiors </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract4"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a7"><h1> Moving lights of structured nature  </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a8"><h1> A glass cube of perpetual movement </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract5"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a9"><h1> A sea creature of vague intentions  </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a10"><h1> A lost mariner trapped through crystal waves </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract6"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a11"><h1> An invisible eye observing the lights </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a12"><h1> A confused driver, aimless and uncertain </h1></div>
+
+	<div style="display: flex;" style="display: flex;" class="hidden" id="intract7"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a13"><h1> Waiting passengers without destinations </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a14"><h1> Fluid antennas capturing signals </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract8"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a15"><h1> A small pyramid of uncertain luminosity </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a16"><h1> Circular platforms of simple behavior </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract9"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a17"><h1> A core of peculiar significance </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a18"><h1> A composite object of balanced forms </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract10"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a19"><h1> Reactors of perpetual resonance </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a20"><h1> A Path of obscure directions </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract11"><i class="material-icons">replay</i></div>
+
+	<!-- -----------clues-bt---------- -->
+
+	</div>
+
+</div>
+
+<!-- <div class="titlecont"><h2>The Mechanical Wanderer is a visual examination of a system perceiving a series of worlds that move following a cyclical and designated rhythm. 
+Each world has its peculiarities, forms, and characteristics. 
+<br><br>
+The main character, in its interactive form presented in the first section of the project, is substituted by its point of view to carefully analyze these intricate worlds. </h2>
+</div> -->
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-<script src="owlcarousel/owl.carousel.min.js"></script>
 
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js.js"></script>
-
-
-
 </html>
