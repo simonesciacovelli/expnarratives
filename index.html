@@ -13,31 +13,34 @@
 </head>
 <body>
 
-<!-- <div class="titlecont"><h2>The Mechanical Wanderer is a visual examination of a system perceiving a series of worlds that move following a cyclical and designated rhythm. 
-Each world has its peculiarities, forms, and characteristics. 
-<br><br>
-The main character, in its interactive form presented in the first section of the project, is substituted by its point of view to carefully analyze these intricate worlds. </h2>
-</div> -->
-
-
-
-<div class="titlecont">
-
-	<video playsinline autoplay muted loop width="100%">
-	    <source class="anmtitle" src="title.webm" type="video/mp4">
-	</video>
-
+<div class="s_header">
+	<div class="s_logo"> <img src="logo.png"></div>
+	
+	<div class="menucont">
+		<div class="icn"> <span class="material-icons-outlined">receipt_long</span> </div>
+		<div class="icn"> <span class="material-icons-outlined">blur_on</span> </div>
+		<div class="icn"> <span class="material-icons-outlined">folder_open</span> </div>
+		<div class="icn"> <span class="material-icons-outlined">nfc</span> </div>
+	</div>
 </div>
 
 
+<div class="container"></div>
+
+<div class="titlecont"><h2>Amalgam is an opportunity to create stories designed to be experienced in a virtual environment, whether that is a website, an application, or a digital space. 
+<br><br>
+Through interactions and storytelling techniques the content produced enforces a series of mechanics that render these stories unique, allowing a variety of interactions and modes of navigating a story.</h2>
+</div>
+
+<!-- <div class="titlecont"><h2>The Mechanical Explorer</h2></div> -->
 
 <div class="overcont">
 
 <div id="container">
 	
-	<script type="module">
+<!-- <script type="module">
 
-import * as THREE from "./build/three.module.js";
+import * as THREE from '../build/three.module.js';
 
             import { OrbitControls } from './jsm/controls/OrbitControls.js';
             import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
@@ -54,12 +57,6 @@ import * as THREE from "./build/three.module.js";
                 clock = new THREE.Clock();
 
                 const container = document.getElementById( 'container' );
-
-                // const container = document.createElement( 'div' );
-                // document.body.appendChild( container );
-                
-
-                // camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 0.25, 20 );
 
                 camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.25, 20 )
 
@@ -105,11 +102,6 @@ import * as THREE from "./build/three.module.js";
                     } );
 
                 renderer = new THREE.WebGLRenderer( { alpha: true, antialias: false, powerPreference: "high-performance" } );
-             //    var container = document.getElementById('canvas');
-         				// var w = container.offsetWidth;
-         				// var h = container.offsetHeight;
-         				// renderer.setSize(w, h);
-         				// container.appendChild(renderer.domElement);
                 renderer.setPixelRatio( window.devicePixelRatio );
                 renderer.setSize( window.innerWidth, window.innerHeight );
                 renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -140,8 +132,6 @@ import * as THREE from "./build/three.module.js";
 
             function animate() {
 
-            // requestAnimationFrame( animate );
-            // controls.update();
             render();
 
             }
@@ -158,7 +148,7 @@ import * as THREE from "./build/three.module.js";
 
             }
 
-</script>
+</script> -->
 
 
 </div>
@@ -166,342 +156,18 @@ import * as THREE from "./build/three.module.js";
 </div>
 
 
-<!-- <div class="titlecont"><h2>The worlds are displayed through a window that blends interactivity with storytelling, encouraging the exploration of these peculiar views
-<br><br>
-Scroll to hide the text and move the cursor to find clues or proceed to the next world</h2>
-</div> -->
+<div class="titlecont"><h2>Storytelling is redesigned for an audience that is willing to be an active element of the development of a story, creating a personal, captivating, and impactful experience. </h2>
+</div>
 
 
 
 <div class="allcont">
 
-	<audio id="ad1" controls autoplay loop>
- 		<source src="1.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad2" controls autoplay loop>
- 		<source src="2.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad3" controls autoplay loop>
- 		<source src="3.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad4" controls autoplay loop>
- 		<source src="4.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad5" controls autoplay loop>
- 		<source src="5.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad6" controls autoplay loop>
- 		<source src="6.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad7" controls autoplay loop>
- 		<source src="7.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad8" controls autoplay loop>
- 		<source src="8.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad9" controls autoplay loop>
- 		<source src="9.mp3" type="audio/mp3">
-	</audio>
-
-	<audio class="hidden" id="ad10" controls autoplay loop>
- 		<source src="10.mp3" type="audio/mp3">
-	</audio>
-
 	<div class="vidcont">
-
-	<div class="mutoggle">
-		<button class="vup"><i class="material-icons-outlined">volume_off</i></button>
-		<button class="vdwn"><i class="material-icons-outlined">volume_up</i></button>
-	</div>
-
-	<!-- ----------1----------- -->
-	<video id="1mainvid_in" playsinline autoplay muted width="100%">
-	    <source class="v1" src="1in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="1mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="1.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="1mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="1out.webm" type="video/mp4">
-	</video>
-
-	<div class="textcont">
-
-		<div class="inbtwtext_1">
-		<div class="clstxt_1"><i class="material-icons-outlined">close</i></div>
-		<p id="t1"> <em>The Silent Valley</em> of golden waves captures fragments and agitation of words devoid of sounds</p>
-		</div>
-
-		<div class="inbtwtext_2">
-		<div class="clstxt_2"><i class="material-icons-outlined">close</i></div>
-		<p id="t2"> <em>The Impervious Temple</em> that observes and directs malleable forms</p>
-		</div>
-
-		<div class="inbtwtext_3">
-		<div class="clstxt_3"><i class="material-icons-outlined">close</i></div>
-		<p id="t3"><em>The Translucent Lab</em> holds and dissects specimens of dubious significance and provenance</p>
-		</div>
-
-
-		<div class="inbtwtext_4">
-		<div class="clstxt_4"><i class="material-icons-outlined">close</i></div>		
-		<p id="t4"><em>The Amorphous Alps</em> hide gems of blinding brilliance and lights of inescapable darkness</p>
-		</div>
-
-		<div class="inbtwtext_5">
-		<div class="clstxt_5"><i class="material-icons-outlined">close</i></div>
-		<p id="t5"><em>The Bewildering Ocean</em> traps lost mariners in alluring arms and soporific stares</p>
-		</div>
-
-		<div class="inbtwtext_6">
-		<div class="clstxt_6"><i class="material-icons-outlined">close</i></div>
-		<p id="t6"><em>The Gazing Metropolis</em> confuses its dwellers with invisible eyes and kaleidoscopic rhythms</p>
-		</div>
-
-		<div class="inbtwtext_7">
-		<div class="clstxt_7"><i class="material-icons-outlined">close</i></div>
-		<p id="t7"><em>The Rotating Stations</em> transports visitors through ethereal tunnels and dubious destinations</p>
-		</div>
-
-		<div class="inbtwtext_8">
-		<div class="clstxt_8"><i class="material-icons-outlined">close</i></div>
-		<p id="t8"><em>The Anxious Monument</em> glances nearby for meaning and illuminated pyramids</p>
-		</div>
-
-		<div class="inbtwtext_9">
-		<div class="clstxt_9"><i class="material-icons-outlined">close</i></div>
-		<p id="t9"><em>The Segmented Observatory</em> traps distant screams of forgotten creatures through ages and places</p>
-		</div>
-
-		<div class="inbtwtext_10">
-		<div class="clstxt_10"><i class="material-icons-outlined">close</i></div>
-		<p id="t10"><em>The Crystal Cube</em> conserves knowledge of no meaning, sustained by lights of monotonous resonance</p>
-		</div>
-
-		<div class="inbtwtext_11">
-		<p style="text-align: center;" id="t11">Overload</p>
-		<div class="interface"><i class="material-icons-outlined">replay</i></div>
-		</div>
-
-		<!-- <div class="bttm"></div> -->
-
-	</div>
-
-	<!-- ----------1----------- -->
-
-
-
-	<!-- ----------2----------- -->
-	<video class="hidden" id="2mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="2in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="2mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="2.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="2mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="2out.webm" type="video/mp4">
-	</video>
-
-
-	<!-- ----------2----------- -->
-
-
-	<!-- ----------3----------- -->
-	<video class="hidden" id="3mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="3in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="3mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="3.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="3mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="3out.webm" type="video/mp4">
-	</video>
-	<!-- ----------3----------- -->
-
-
-	<!-- ----------4----------- -->
-	<video class="hidden" id="4mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="4in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="4mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="4.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="4mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="4out.webm" type="video/mp4">
-	</video>
-	<!-- ----------4----------- -->
-
-
-
-
-	<!-- ----------5----------- -->
-	<video class="hidden" id="5mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="5in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="5mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="5.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="5mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="5out.webm" type="video/mp4">
-	</video>
-	<!-- ----------5----------- -->
-
-
-	<!-- ----------6----------- -->
-	<video class="hidden" id="6mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="6in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="6mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="6.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="6mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="6out.webm" type="video/mp4">
-	</video>
-	<!-- ----------6----------- -->
-
-
-	<!-- ----------7----------- -->
-	<video class="hidden" id="7mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="7in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="7mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="7.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="7mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="7out.webm" type="video/mp4">
-	</video>
-	<!-- ----------7----------- -->
-
-
-	<!-- ----------8----------- -->
-
-	<video class="hidden" id="8mainvid_in" playsinline autoplay muted width="100%">
-		<source src="8in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="8mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="8.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="8mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="8out.webm" type="video/mp4">
-	</video>
-	<!-- ----------8----------- -->
-
-
-	<!-- ----------9----------- -->
-	<video class="hidden" id="9mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="9in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="9mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="9.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="9mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="9out.webm" type="video/mp4">
-	</video>
-	<!-- ----------9----------- -->
-
-
-	<!-- ----------10----------- -->
-	<video class="hidden" id="10mainvid_in" playsinline autoplay muted width="100%">
-	    <source src="10in.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="10mainvid_loop" playsinline autoplay muted loop width="100%">
-	    <source src="10.webm" type="video/mp4">
-	</video>
-
-	<video class="hidden" id="10mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="10out.webm" type="video/mp4">
-	</video>
-	<!-- ----------10----------- -->
-
-	<!-- ----------end----------- -->
-	<video class="hidden" id="11mainvid_out" playsinline autoplay muted width="100%">
-	    <source src="end.webm" type="video/mp4">
-	</video>
-	<!-- ----------end----------- -->
-
-
-	<!-- -----------clues-bt---------- -->
-
-	<div id="intract"><i class="material-icons">chevron_right</i></div>
-	<div id="clue_a1"><h1> A mysterious flora of dazzling colors </h1></div>
-	<div id="clue_a2"><h1>Scintillating cubes of dubious forms </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract2"> <i class="material-icons">chevron_right</i> </div>
-	<div style="display: flex;" class="hidden" id="clue_a3"><h1> Malleable clouds of odd materials </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a4"><h1> A diligent and confused eye </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract3"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a5"><h1> Moving invisible hands of perpetual presence </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a6"><h1> A translucent container of peculiar interiors </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract4"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a7"><h1> Moving lights of structured nature  </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a8"><h1> A glass cube of perpetual movement </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract5"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a9"><h1> A sea creature of vague intentions  </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a10"><h1> A lost mariner trapped through crystal waves </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract6"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a11"><h1> An invisible eye observing the lights </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a12"><h1> A confused driver, aimless and uncertain </h1></div>
-
-	<div style="display: flex;" style="display: flex;" class="hidden" id="intract7"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a13"><h1> Waiting passengers without destinations </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a14"><h1> Fluid antennas capturing signals </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract8"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a15"><h1> A small pyramid of uncertain luminosity </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a16"><h1> Circular platforms of simple behavior </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract9"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a17"><h1> A core of peculiar significance </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a18"><h1> A composite object of balanced forms </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract10"><i class="material-icons">chevron_right</i></div>
-	<div style="display: flex;" class="hidden" id="clue_a19"><h1> Reactors of perpetual resonance </h1></div>
-	<div style="display: flex;" class="hidden" id="clue_a20"><h1> A Path of obscure directions </h1></div>
-
-	<div style="display: flex;" class="hidden" id="intract11"><i class="material-icons">replay</i></div>
-
-	<!-- -----------clues-bt---------- -->
 
 	</div>
 
 </div>
-
-<!-- <div class="titlecont"><h2>The Mechanical Wanderer is a visual examination of a system perceiving a series of worlds that move following a cyclical and designated rhythm. 
-Each world has its peculiarities, forms, and characteristics. 
-<br><br>
-The main character, in its interactive form presented in the first section of the project, is substituted by its point of view to carefully analyze these intricate worlds. </h2>
-</div> -->
 
 </body>
 
