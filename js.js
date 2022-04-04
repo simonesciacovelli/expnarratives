@@ -1,5 +1,22 @@
 
 
+$(document).ready(function(){
+  $(".btnt").click(function(){
+    $("canvas").toggleClass("container_closed");
+    
+  });
+});
+
+$(document).ready(function(){
+  $('.main-carousel').slick({
+    speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+});
+
+
 $( ".dnv_1" ).click(function() {
    document.querySelector(".overcont").scrollIntoView({
     behavior: "smooth",
