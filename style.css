@@ -10,6 +10,7 @@ html, body {
 	padding: 10px;
 	border-radius: 10px;
 	color: black;
+	z-index: 50;
 	font-size: 1em;
 	font-weight: bold;
 	position: fixed;
@@ -580,6 +581,36 @@ textarea{
 	border: none;
 	padding: 10px;
 	border-radius: 10px;
+
+}
+
+
+@media (max-width: 600px) {
+
+
+   /* .flex-grid{
+      margin-left:30px;
+      margin-left:30px;
+    }*/
+    .container_vid p{
+    	width: 197px;
+    	line-height: 40px;
+    }
+
+    .titlecont_4 {
+    	height: auto;
+    	flex-direction: column !important;
+    }
+
+    .portal_cont{
+    	width: auto;
+    }
+
+    h2{
+    	font-size: 34px !important;
+    }
+
+
 
 }
 

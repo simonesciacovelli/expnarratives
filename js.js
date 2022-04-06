@@ -47,6 +47,9 @@ $( ".stick_bttn" ).click(function() {
   });
 });
 
+
+
+
         $(document).ready(function() {
             // Get media - with autoplay disabled (audio or video)
             var media = $('video').not("[autoplay='autoplay']");
