@@ -93,7 +93,8 @@ video{
 	justify-content: center;
 	position: absolute;
 	overflow: auto;
-/*	opacity: 0;*/
+	/*	opacity: 0;*/
+	/*pointer-events: none;*/
 	transition: 0.4s;
 	padding: 20px;
 	background-color: #2d2b28;
@@ -113,6 +114,7 @@ video{
 }
 
 p{
+
 	color: white;
 	transition: 0.4s;
 	margin-bottom: 1000px;
@@ -131,7 +133,7 @@ p{
 	border-radius: 20px;
 	/*height: 150px;*/
 	width: 350px;
-	font-family: roboto;
+	font-family: "roboto";
 	padding: 40px;
 	filter: drop-shadow(10px 10px 20px black)
 
@@ -139,7 +141,7 @@ p{
 }
 
 h1{
-	font-family: roboto;
+	font-family: "roboto";
 	font-size: 17px;
 	font-weight: 100;
 	/*background-color: white;*/
@@ -166,14 +168,15 @@ h1{
 	justify-content: center;
 	cursor: pointer;
 	transition: 0.4s;
-	border-radius: 100%;
+	border-radius: 30px;
 }
 
 [id^="intract"]:hover{
 	transition: 0.4s;
-	width: 50px;
+	/*width: 50px;*/
+	padding-left: 37px;
 	opacity: 1;
-	height: 50px;
+	/*height: 50px;*/
 }
 
 
@@ -211,7 +214,7 @@ h1{
 }
 
 [id^="clue"]:hover{
-	width: 90px;
+	width: 80px;
 	height: 120px;
 	border-radius: 20px;
 	transition: 0.4s;
@@ -378,7 +381,7 @@ margin-left: 40%;
 }
 
 .interface:hover{
-	width: 170px;
+	width: 70px;
 	transition: 0.4s;
 }
 

@@ -18,7 +18,7 @@ $('#1mainvid_in').bind('ended', function() {
 
 
 $(document).ready(function(){
-  $("#intract").click(function(){
+  $("#t1").scroll(function(){
     $("#1mainvid_loop").removeAttr("loop");
 
     $('#t1').addClass("hidden");
@@ -61,8 +61,10 @@ $(document).ready(function(){
 });
 
 
+
+
 $(document).ready(function(){
-  $("#intract2").click(function(){
+  $(".textcont").scroll(function(){
     $("#2mainvid_loop").removeAttr("loop");
 
     $('#t2').addClass("hidden");
