@@ -6,113 +6,32 @@
 <link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width" />
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" href="carousel.css"/>
 
+
+	
 </head>
-
-
 <body>
 
-
-<div class="container_vid">
- <p> <span class="h-title">Amalgam</span> <br><br>Join us in recreating storytelling</p>
-    <video playsinline muted autoplay loop width="100%">
-        <source src="am_1.mp4" type="video/mp4">
-    </video>
-</div>
-
-
-<div class="stick_bttn">Contact</div>
-
-<!-- <div class="s_header">
-	<div class="menucont">
-		<div class="dnv_1"> <img src="lo1.svg"><span class="u_text">amalgam</span></div>
-		<div class="dnv_2"> <img src="lo2.svg"><span class="u_text">storytelling</span></div>
-		<div class="dnv_3"> <img src="lo3.svg"><span class="u_text">portals</span></div>
-		<div class="dnv_4"> <img src="lo4.svg"><span class="u_text">contact</span></div>
-	</div>
-</div> -->
-
-
-
-<div class="titlecont"><h2>Amalgam is a production studio that utilizes interactions as the base for crafting stories. 
+<div class="titlecont"><h2>The Mechanical Wanderer is a visual examination of a system perceiving a series of worlds that move following a cyclical and designated rhythm. 
+Each world has its peculiarities, forms, and characteristics. 
 <br><br>
-Through this balance the content produced enforces a series of mechanics that render these stories unique, allowing a variety of ways of navigating a story.</h2>
+The main character, in its interactive form presented in the first section of the project, is substituted by its point of view to carefully analyze these intricate worlds. </h2>
 </div>
 
-<!-- 
-<div class="titlecont_2"><h2>Storytelling is redesigned for an audience that is willing to be an active element of the development of a story, creating a personal, captivating, and impactful experience. </h2> -->
-</div>
+<!-- <div class="titlecont"><h2>The Mechanical Explorer</h2></div> -->
 
-
-<div class="container_vid">
-    <video playsinline muted loop width="100%">
-        <source src="am_2.mp4" type="video/mp4">
-    </video>
-</div>
-
-
-
-<div class="titlecont_3"><h2>Our three primary Environments are POINT (Web), TOUCH (App), and SPACES (AR/VR). 
-Each environment has specific functions and interactions. 
-<br><br>A story developed for POINT will be radically different than one for SPACES</h2>
-</div>
-
-<div class="titlecont_4">
-
-    <div class="portal_cont">
-        <div class="par_cont"><p>POINT utilizes the web as interaction, allowing the precision of a cursor and the capabilities of modern desktops to mesmerize</p>
-        </div>
-        <div class="portal_im">
-        <img src="an_2.png">
-        </div>
-    </div>
-
-
-
-    <div class="portal_cont">
-         <div class="par_cont"><p>TOUCH relies on the portability of a phone, the cameras, and its malleability to amplify a story</p>
-        </div>
-        <div class="portal_im">
-        <img style="  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);" src="an_1.png">
-        </div>
-    </div>
-
-
-
-
-    <div class="portal_cont">
-        <div class="par_cont"><p>SPACES recreates a new environment for our spectators, both mixed and virtual reality are utilized to envelop these stories</p>
-        </div>
-        <div class="portal_im">
-        <img src="an_3.png">
-        </div>
-    </div>
-
-</div>
-
-
-<!-- 
 <div class="overcont">
-<div class="btnt">
-<p1>Explore Point</p1>
-</div>
 
-<div id=container>
-    
-<script type="module">
+<div id="container">
+	
+	<script type="module">
 
 import * as THREE from '../build/three.module.js';
 
             import { OrbitControls } from './jsm/controls/OrbitControls.js';
             import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
             import { RGBELoader } from './jsm/loaders/RGBELoader.js';
-            import { DRACOLoader } from './jsm/loaders/DRACOLoader.js'
             import { RoughnessMipmapper } from './jsm/utils/RoughnessMipmapper.js';
 
             let camera, scene, renderer, controls, clock, mixer;
@@ -126,10 +45,15 @@ import * as THREE from '../build/three.module.js';
 
                 const container = document.getElementById( 'container' );
 
-                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 )
+                // const container = document.createElement( 'div' );
+                // document.body.appendChild( container );
+                
 
-                // camera.position.set( 0, 0, 0 );
-                camera.position.z = 2;
+                // camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 0.25, 20 );
+
+                camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.25, 20 )
+
+                camera.position.set( -17, 4, -8.7 );
 
                 console.log(camera)
 
@@ -137,7 +61,7 @@ import * as THREE from '../build/three.module.js';
 
                 new RGBELoader()
                     .setPath( 'textures/' )
-                    .load( 'studio.hdr', function ( texture ) {
+                    .load( 'royal_esplanade_1k.hdr', function ( texture ) {
 
                         texture.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -151,7 +75,7 @@ import * as THREE from '../build/three.module.js';
                         const roughnessMipmapper = new RoughnessMipmapper( renderer );
 
                         const loader = new GLTFLoader().setPath( 'models/' );
-                        loader.load( 'portal.gltf', function ( gltf ) {
+                        loader.load( 'p2.glb', function ( gltf ) {
 
                             gltf.scene.traverse( function ( child ) {
 
@@ -170,19 +94,24 @@ import * as THREE from '../build/three.module.js';
 
                     } );
 
-                renderer = new THREE.WebGLRenderer( { alpha: true, antialias: false} );
+                renderer = new THREE.WebGLRenderer( { alpha: true, antialias: false, powerPreference: "high-performance" } );
+             //    var container = document.getElementById('canvas');
+         				// var w = container.offsetWidth;
+         				// var h = container.offsetHeight;
+         				// renderer.setSize(w, h);
+         				// container.appendChild(renderer.domElement);
                 renderer.setPixelRatio( window.devicePixelRatio );
                 renderer.setSize( window.innerWidth, window.innerHeight );
                 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-                renderer.toneMappingExposure = 0.1;
+                renderer.toneMappingExposure = 1;
                 renderer.outputEncoding = THREE.sRGBEncoding;
                 container.appendChild( renderer.domElement );
 
                 const controls = new OrbitControls( camera, renderer.domElement );
                 // controls.enableDamping = true;
                 controls.minDistance = 10;
-                controls.maxDistance = 10;
-                // controls.target.set( -0.1, -0.1, -0.1 );
+                controls.maxDistance = 20;
+                controls.target.set( -0.1, -0.1, -0.1 );
                 controls.update();
                 window.addEventListener( 'resize', onWindowResize );
 
@@ -201,6 +130,8 @@ import * as THREE from '../build/three.module.js';
 
             function animate() {
 
+            // requestAnimationFrame( animate );
+            // controls.update();
             render();
 
             }
@@ -208,8 +139,8 @@ import * as THREE from '../build/three.module.js';
 
             function render() {
 
-             scene.rotation.y += 0.0002;
-             scene.rotation.x += 0.0002;
+             scene.rotation.y += 0.001;
+             scene.rotation.x += 0.001;
 
                 requestAnimationFrame(render);
 
@@ -221,66 +152,275 @@ import * as THREE from '../build/three.module.js';
 
 
 </div>
+
+</div>
+
+
+<div class="titlecont"><h2>The worlds are displayed through a window that blends interactivity with storytelling, encouraging the exploration of these peculiar views
+<br><br>
+Scroll to hide the text and move the cursor to find clues or proceed to the next world</h2>
+</div>
+
+
+
+<div class="allcont">
+
+	<div class="vidcont">
+
+
+
+	<!-- ----------1----------- -->
+	<video id="1mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="1in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="1mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="1.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="1mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="1out.webm" type="video/mp4">
+	</video>
+
+	<div class="textcont">
+
+		<p id="t1"> <em>The Silent Valley</em> of golden waves captures fragments and agitation of words devoid of sounds</p>
+
+		<p class="hidden" id="t2"> <em>The Impervious Temple</em> that observes and directs malleable forms</p>
+
+		<p class="hidden" id="t3"><em>The Translucent Lab</em> holds and dissects specimens of dubious significance and provenance</p>
+
+		<p class="hidden" id="t4"><em>The Amorphous Alps</em> hide gems of blinding brilliance and lights of inescapable darkness</p>
+
+		<p class="hidden" id="t5"><em>The Bewildering Ocean</em> traps lost mariners in alluring arms and soporific stares</p>
+
+		<p class="hidden" id="t6"><em>The Gazing Metropolis</em> confuses its dwellers with invisible eyes and kaleidoscopic rhythms</p>
+
+		<p class="hidden" id="t7"><em>The Rotating Stations</em> transports visitors through ethereal tunnels and dubious destinations</p>
+
+		<p class="hidden" id="t8"><em>The Anxious Monument</em> glances nearby for meaning and illuminated pyramids</p>
+
+		<p class="hidden" id="t9"><em>The Segmented Observatory</em> traps distant screams of forgotten creatures through ages and places</p>
+
+		<p class="hidden" id="t10"><em>The Crystal Cube</em> conserves knowledge of no meaning, sustained by lights of monotonous resonance</p>
+
+		<p class="hidden" style="text-align: center;" id="t11">Overload</p>
+
+		<div class="bttm"></div>
+
+		<div class="interface"><i class="material-icons-outlined">info</i></div>
+
+	</div>
+
+	<!-- ----------1----------- -->
+
+
+
+	<!-- ----------2----------- -->
+	<video class="hidden" id="2mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="2in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="2mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="2.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="2mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="2out.webm" type="video/mp4">
+	</video>
+
+
+	<!-- ----------2----------- -->
+
+
+	<!-- ----------3----------- -->
+	<video class="hidden" id="3mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="3in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="3mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="3.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="3mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="3out.webm" type="video/mp4">
+	</video>
+	<!-- ----------3----------- -->
+
+
+	<!-- ----------4----------- -->
+	<video class="hidden" id="4mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="4in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="4mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="4.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="4mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="4out.webm" type="video/mp4">
+	</video>
+	<!-- ----------4----------- -->
+
+
+
+
+	<!-- ----------5----------- -->
+	<video class="hidden" id="5mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="5in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="5mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="5.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="5mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="5out.webm" type="video/mp4">
+	</video>
+	<!-- ----------5----------- -->
+
+
+	<!-- ----------6----------- -->
+	<video class="hidden" id="6mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="6in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="6mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="6.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="6mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="6out.webm" type="video/mp4">
+	</video>
+	<!-- ----------6----------- -->
+
+
+	<!-- ----------7----------- -->
+	<video class="hidden" id="7mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="7in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="7mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="7.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="7mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="7out.webm" type="video/mp4">
+	</video>
+	<!-- ----------7----------- -->
+
+
+	<!-- ----------8----------- -->
+
+	<video class="hidden" id="8mainvid_in" playsinline autoplay muted width="100%">
+		<source src="8in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="8mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="8.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="8mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="8out.webm" type="video/mp4">
+	</video>
+	<!-- ----------8----------- -->
+
+
+	<!-- ----------9----------- -->
+	<video class="hidden" id="9mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="9in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="9mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="9.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="9mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="9out.webm" type="video/mp4">
+	</video>
+	<!-- ----------9----------- -->
+
+
+	<!-- ----------10----------- -->
+	<video class="hidden" id="10mainvid_in" playsinline autoplay muted width="100%">
+	    <source src="10in.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="10mainvid_loop" playsinline autoplay muted loop width="100%">
+	    <source src="10.webm" type="video/mp4">
+	</video>
+
+	<video class="hidden" id="10mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="10out.webm" type="video/mp4">
+	</video>
+	<!-- ----------10----------- -->
+
+	<!-- ----------end----------- -->
+	<video class="hidden" id="11mainvid_out" playsinline autoplay muted width="100%">
+	    <source src="end.webm" type="video/mp4">
+	</video>
+	<!-- ----------end----------- -->
+
+
+	<!-- -----------clues-bt---------- -->
+
+	<div id="intract"><i class="material-icons">chevron_right</i></div>
+	<div id="clue_a1"><h1> A mysterious flora of dazzling colors </h1></div>
+	<div id="clue_a2"><h1> Cubes of dubious forms </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract2"> <i class="material-icons">chevron_right</i> </div>
+	<div style="display: flex;" class="hidden" id="clue_a3"><h1> Malleable clouds of odd materials </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a4"><h1> A diligent and observing eye </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract3"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a5"><h1> Moving invisible hands  </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a6"><h1> A translucent container of peculiar interiors </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract4"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a7"><h1> Moving lights of structured nature  </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a8"><h1> A glass cube of perpetual movement </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract5"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a9"><h1> A sea creature of vague intentions  </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a10"><h1> A lost mariner trapped through crystal waves </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract6"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a11"><h1> An invisible eye observing the lights </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a12"><h1> A confused driver, aimless and uncertain </h1></div>
+
+	<div style="display: flex;" style="display: flex;" class="hidden" id="intract7"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a13"><h1> Waiting passengers without destinations </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a14"><h1> Fluid antennas capturing signals </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract8"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a15"><h1> A small pyramid of uncertain luminosity </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a16"><h1> Circular platforms of simple behavior </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract9"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a17"><h1> A core of peculiar significance </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a18"><h1> A composite object of balanced forms </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract10"><i class="material-icons">chevron_right</i></div>
+	<div style="display: flex;" class="hidden" id="clue_a19"><h1> Reactors of perpetual resonance </h1></div>
+	<div style="display: flex;" class="hidden" id="clue_a20"><h1> A Path of obscure directions </h1></div>
+
+	<div style="display: flex;" class="hidden" id="intract11"><i class="material-icons">replay</i></div>
+
+	<!-- -----------clues-bt---------- -->
+
+	</div>
+
+</div>
+
+<!-- <div class="titlecont"><h2>The Mechanical Wanderer is a visual examination of a system perceiving a series of worlds that move following a cyclical and designated rhythm. 
+Each world has its peculiarities, forms, and characteristics. 
+<br><br>
+The main character, in its interactive form presented in the first section of the project, is substituted by its point of view to carefully analyze these intricate worlds. </h2>
 </div> -->
-
-<div class="container_vid"><p>Project Selection</p>s
-</div>
-
-<div class="titlecont"><h2>Our stories are defined by our audience and the many paths they decide to follow <br><br>
-This makes Amalgam a unique studio capable of empowering and ever-evolving ideas <br><br>
-Join us.</h2>
-</div>
-
-
-<div class="main-carousel">
-    <div class="carousel-cell"><img src="b1.png"></div>
-    <div class="carousel-cell"><img src="b2.png"></div>
-    <div class="carousel-cell"><img src="b3.png"></div>
-    <div class="carousel-cell"><img src="b4.png"></div>
-    <div class="carousel-cell"><img src="b5.png"></div>
-    <div class="carousel-cell"><img src="b6.png"></div>
-</div>
-
-
-
-<div class="cont_form">
-    
-            <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return false;">
-            <div>
-                <input type="text" name="name" placeholder="name" class="contact-form-input" required />
-            </div>
-            <div>
-                <input type="email" name="email" placeholder="email" class="contact-form-input" required />
-            </div>
-            <div>
-                <textarea name="message" class="contact-form-input" placeholder="Message" required></textarea>
-            </div>
-            <div class="bttnarea">
-                <button type="submit">send</button>
-            </div>
-        </form>
-</div>
-
-
-<div class="footer-basic">
-        <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-            <div class="copyright">Amalgam © 2022</div>
-        </footer>
-    </div>
 
 </body>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js.js"></script>
-<script type="text/javascript" src="slick/slick.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 </html>
